@@ -1,0 +1,22 @@
+{
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSaveMode": "file"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSaveMode": "file"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSaveMode": "file"
+  },
+  "[python]": {
+    "editor.formatOnSaveMode": "file"
+  },
+  "python.formatting.provider": "black",
+  "python.formatting.blackArgs": [
+      "--line-length=120",
+      "--target-version=py310"
+  ],
+}
