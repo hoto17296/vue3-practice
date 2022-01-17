@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import useTodo from '../composable/todo'
+import useTodo from '@/composable/todo'
 import TodoItem from './TodoItem.vue'
 
 const { todo, addTodo, deleteTodo } = useTodo()
