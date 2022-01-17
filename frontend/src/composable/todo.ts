@@ -11,7 +11,9 @@ export default function () {
     todo.list.push({ title: item })
   }
 
-  function deleteTodo(index: number) {
+  function deleteTodo(item: TodoItem) {
+    const index = todo.list.indexOf(item)
+    if (index < 0) throw new Error('Unkown item')
     todo.list.splice(index, 1)
   }
 
