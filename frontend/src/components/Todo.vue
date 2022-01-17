@@ -1,8 +1,11 @@
 <script setup lang="ts">
 import useTodo from '@/composable/todo'
 import TodoItem from './TodoItem.vue'
+import axios from 'axios'
 
-const { todo, addTodo, deleteTodo } = useTodo()
+const { data } = await axios.get('/tasks')
+
+const { todo, addTodo, deleteTodo } = useTodo(data)
 
 function onSubmit(event) {
   const title = event.target.title.value.trim()

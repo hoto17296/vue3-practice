@@ -1,11 +1,8 @@
 import { computed, reactive } from 'vue'
 import type { TodoItem } from '@/types/todo'
 
-export default function () {
-  const todo = reactive({
-    list: [{ title: 'foo' }, { title: 'bar' }] as TodoItem[],
-    length: computed(() => todo.list.length),
-  }) as any
+export default function (data: TodoItem[] = []) {
+  const todo = reactive({ list: data })
 
   function addTodo(item: string) {
     todo.list.push({ title: item })
