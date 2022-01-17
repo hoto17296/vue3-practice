@@ -1,10 +1,8 @@
 <script setup lang="ts">
-import { reactive } from 'vue'
+import useTodo from '../composable/todo'
 import TodoItem from './TodoItem.vue'
 
-const todo = reactive({
-  list: [{ title: 'foo' }, { title: 'bar' }],
-})
+const { todo, addTodo, deleteTodo } = useTodo()
 </script>
 
 <template>
