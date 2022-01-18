@@ -12,16 +12,12 @@ function onSubmit(event) {
   event.target.title.value = ''
   if (title) addTodo(title)
 }
-
-function onComplete(item) {
-  deleteTodo(item)
-}
 </script>
 
 <template>
   <ul>
     <li v-for="item in todo.list">
-      <TodoItem v-bind="item" @complete="onComplete(item)"></TodoItem>
+      <TodoItem :item="item" @complete="deleteTodo(item)"></TodoItem>
     </li>
   </ul>
   <form @submit.prevent="onSubmit">

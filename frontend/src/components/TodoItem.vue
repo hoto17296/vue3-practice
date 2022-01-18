@@ -5,12 +5,14 @@ interface Emits {
   (e: 'complete'): void
 }
 
-defineProps<TodoItem>()
+defineProps<{
+  item: TodoItem
+}>()
 const emit = defineEmits<Emits>()
 </script>
 
 <template>
-  <span>{{ title }}</span>
+  <span>{{ item.title }}</span>
   <button type="button" @click="emit('complete')">Complete</button>
 </template>
 
